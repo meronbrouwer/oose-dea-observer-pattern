@@ -15,9 +15,8 @@ public class Teacher extends Observable {
     public void teach() {
         while (true) {
 
-            String wisdowm = teachings.getWisdom();
-            setChanged();
-            notifyObservers(wisdowm);
+            String wisdom = teachings.getWisdom();
+            say(wisdom);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -25,5 +24,11 @@ public class Teacher extends Observable {
             }
 
         }
+    }
+
+    private void say(String wisdom) {
+        System.out.println(wisdom);
+        setChanged();
+        notifyObservers(wisdom);
     }
 }

@@ -6,7 +6,7 @@ import nl.han.dea.exercises.model.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Les {
+public class CourseApp {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<Student>();
 

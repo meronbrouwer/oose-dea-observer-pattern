@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple Les.
+ * Unit test for simple CourseApp.
  */
 public class LesTest
     extends TestCase
