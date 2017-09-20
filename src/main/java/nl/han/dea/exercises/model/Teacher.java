@@ -22,7 +22,6 @@ public class Teacher extends Observable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
     }
 

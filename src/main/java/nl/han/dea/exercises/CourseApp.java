@@ -1,7 +1,7 @@
 package nl.han.dea.exercises;
 
-import nl.han.dea.exercises.model.Teacher;
 import nl.han.dea.exercises.model.Student;
+import nl.han.dea.exercises.model.Teacher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +22,8 @@ public class CourseApp {
 
         Teacher teacher = new Teacher("Meron");
 
-        for (Student student : students){
-            teacher.addObserver(student);
+        for (Student student : students) {
+            student.setTeacher(teacher);
         }
 
         teacher.teach();

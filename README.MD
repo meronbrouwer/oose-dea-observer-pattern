@@ -12,7 +12,12 @@ Bekijk de code en voer het uit. Wat opvalt is dat de Teacher zijn wijsheden doce
 ## Stap 2 Zorg ervoor dat de studenten de docent gaan observeren
 Zorg ervoor dat je de Java Interface Observer en de Java Klasse Observable op de juiste manier toepast. Iedere keer als de docent nu iets zegt, moeten de Studenten dit te horen krijgen en vervolgens de methode makeNote() aanroepen.
 
-## Stap 3 Volgorde van Observers aanpassen
-Wat nu opvalt is dat de Observers steeds in dezelfde volgorde worden aangeroepen. Pas dit aan. Zorg ervoor dat deze volgorde iedere keer anders is (Random dus).
+## Stap 3 Studenten verantwoordelijk maken voor het registeren 
+Wat opvalt in de JAVA API is dat de Observable een lijst van Observers heeft. Nieuwe Studenten worden nu vanuit de CourseApp geregistreerd bij de Teacher. Pas dit zodanig aan, dat een Student een setTeacher(teacher) methode heeft. Wanneer deze wordt aangeroepen, registreerd de student zichzelf bij de Teacher.
 
-Realiseer je hiervoor dat de Observable een SuperKlasse heeft met een methode die je kunt overschijven.
+## Stap 4 Studenten verlaten de les
+Studenten zullen ook soms de klas tussentijds verlaten. Dit gaan we nu inbouwen.
+
+* Zorg ervoor dat zo wanneer setTeacher(teacher) wordt aangeroep er een teller wordt geinstantieerd met een willekeurig getal tussen de 0 en 20. Hoe je dit moet doen kun je terug vinden in de klasse Teachings.java.
+* Zorg ervoor dat studenten bijhouden hoeveel notities ze gemaakt hebben (verlaag de teller met 1 wanneer makeNotes() wordt aangeroepen).
+* Zorg ervoor dat als de teller op 0 staat, de Student zichzelf deregistreerd als Observable.
