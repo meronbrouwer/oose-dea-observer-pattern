@@ -13,7 +13,7 @@ public class Teacher extends Observable {
     }
 
     public void teach() {
-        while (true) {
+        while (countObservers() > 0) {
 
             String wisdom = teachings.getWisdom();
             say(wisdom);
@@ -23,10 +23,11 @@ public class Teacher extends Observable {
                 e.printStackTrace();
             }
         }
+
+        System.out.println("Where have all my students gone?");
     }
 
     private void say(String wisdom) {
-        System.out.println(wisdom);
         setChanged();
         notifyObservers(wisdom);
     }
