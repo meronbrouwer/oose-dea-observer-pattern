@@ -6,14 +6,13 @@ De docent heeft geen notie van zijn studenten. Hij geeft college en op ieder mom
 
 Dit probleem vraagt om het toepassen van het Observer Pattern. In deze opdracht gaan we dit uitwerken.
 
-## Stap 1 Project aanmaken
+## Stap 1 Snappen van de opzet
+Bekijk de code en voer het uit. Wat opvalt is dat de Teacher zijn wijsheden doceert, zonder dat zijn studenten zich hier bewust van zijn.
 
-Maak met Maven een nieuw project aan. Gebruik een simpel Archetype, zoals bijvoorbeeld: 
+## Stap 2 Zorg ervoor dat de studenten de docent gaan observeren
+Zorg ervoor dat je de Java Interface Observer en de Java Klasse Observable op de juiste manier toepast. Iedere keer als de docent nu iets zegt, moeten de Studenten dit te horen krijgen en vervolgens de methode makeNote() aanroepen.
 
-```
-maven-archetype-quickstart
-```
+## Stap 3 Volgorde van Observers aanpassen
+Wat nu opvalt is dat de Observers steeds in dezelfde volgorde worden aangeroepen. Pas dit aan. Zorg ervoor dat deze volgorde iedere keer anders is (Random dus).
 
-## Stap 2 Modelleren
-
-Het Domein is al gemodelleerd. We komen uit om twee Java Klassen, een `Teacher` en een `Student`.
+Realiseer je hiervoor dat de Observable een SuperKlasse heeft met een methode die je kunt overschijven.
