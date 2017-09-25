@@ -7,14 +7,12 @@ import java.util.Random;
 public class Student implements Observer {
 
     private final String name;
-    private final Course course;
 
     private int numberOfNotes = 10;
 
-    public Student(String name, Course course) {
+    public Student(String name) {
 
         this.name = name;
-        this.course = course;
     }
 
     private void makeNotes(String note) {
@@ -24,7 +22,6 @@ public class Student implements Observer {
 
         if (numberOfNotes == 0) {
             System.out.println("Student " + name + " has left the classroom");
-            course.leave(this);
         }
     }
 
