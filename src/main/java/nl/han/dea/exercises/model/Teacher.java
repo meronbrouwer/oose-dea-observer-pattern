@@ -1,8 +1,9 @@
 package nl.han.dea.exercises.model;
 
 import java.util.Observable;
+import java.util.Observer;
 
-public class Teacher extends Observable {
+public class Teacher extends Observable implements Observer{
 
     private final String name;
     private Teachings teachings;
@@ -30,5 +31,9 @@ public class Teacher extends Observable {
     private void say(String wisdom) {
         setChanged();
         notifyObservers(wisdom);
+    }
+
+    public void update(Observable o, Object arg) {
+        System.out.println("hmmmm, intersting way of putting things.");
     }
 }

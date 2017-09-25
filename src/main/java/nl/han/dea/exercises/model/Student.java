@@ -6,20 +6,15 @@ import java.util.Random;
 
 public class Student implements Observer {
 
-    private Teacher teacher;
     private final String name;
-    private int numberOfNotes;
+    private final Course course;
 
-    public Student(String name) {
+    private int numberOfNotes = 10;
+
+    public Student(String name, Course course) {
 
         this.name = name;
-    }
-
-    public void setTeacher(Teacher teacher) {
-        numberOfNotes = (new Random()).nextInt(20);
-
-        this.teacher = teacher;
-        teacher.addObserver(this);
+        this.course = course;
     }
 
     private void makeNotes(String note) {
@@ -28,8 +23,8 @@ public class Student implements Observer {
         numberOfNotes--;
 
         if (numberOfNotes == 0) {
-            teacher.deleteObserver(this);
             System.out.println("Student " + name + " has left the classroom");
+            course.leave(this);
         }
     }
 
