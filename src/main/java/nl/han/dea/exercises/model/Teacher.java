@@ -34,6 +34,6 @@ public class Teacher extends Observable implements Observer{
     }
 
     public void update(Observable o, Object arg) {
-        System.out.println("hmmmm, intersting way of putting things.");
+        System.out.println("hmmmm, interesting way of putting things.");
     }
 }

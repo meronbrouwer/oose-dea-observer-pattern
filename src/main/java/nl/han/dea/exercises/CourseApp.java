@@ -1,7 +1,5 @@
 package nl.han.dea.exercises;
 
-import nl.han.dea.exercises.exceptions.NoAttendeesException;
-import nl.han.dea.exercises.exceptions.NoTeacherException;
 import nl.han.dea.exercises.model.Course;
 import nl.han.dea.exercises.model.Student;
 import nl.han.dea.exercises.model.Teacher;
@@ -17,12 +15,6 @@ public class CourseApp {
 
         course.setTeacher(new Teacher("Meron"));
 
-        try {
-            course.startCourse();
-        } catch (NoTeacherException e) {
-            System.out.println("Course wasn't started, since there is no teacher available.");
-        } catch (NoAttendeesException e) {
-            System.out.println("Course wasn't started, since there are no students available.");
-        }
+        course.startCourse();
     }
 }

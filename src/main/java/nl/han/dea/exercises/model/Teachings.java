@@ -27,7 +27,7 @@ public class Teachings {
     }
 
     public String getWisdom() {
-        String wisdowm = teachings.get((new Random()).nextInt(teachings.size()));
-        return wisdowm;
+        String wisdom = teachings.get((new Random()).nextInt(teachings.size()));
+        return wisdom;
     }
 }
