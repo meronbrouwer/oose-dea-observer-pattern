@@ -55,10 +55,7 @@ Wat nu nog niet netjes is is de methode `addStudent()`. Deze verwacht een Studen
 * Voeg vanuit de `CourseApp` ook een `Teacher` te als bijwoner (attendee) van de `Course`.
 
 Wanneer `startCourse()` wordt aangeroepen is het nog denkbaar dat er geen  `Teacher` is of dat niemand de 
- `Course` bijwoont. 
- 
-* Gooi in het geval dat er geen  `Teacher` is, een `NoTeacherAvailable` Exception. 
-* Gooi in het geval dat er niemand `Course` bijwoont, een `NoStudentsAvailable` Exception. 
+ `Course` bijwoont.  Zorg ervoor dat deze situaties op een nette manier worden afgehandeld.
 
 
 
